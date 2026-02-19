@@ -2,8 +2,7 @@
 import os
 
 # Берём токен из переменных окружения Render
-BOT_TOKEN = os.getenv("BOT_TOKEN", "
-YOUR_BOT_TOKEN_HERE")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "YOUR_BOT_TOKEN_HERE")
 
 # Админы
 ADMIN_ID = os.getenv("ADMIN_ID", "8272014510")
