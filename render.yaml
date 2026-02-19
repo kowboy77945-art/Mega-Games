@@ -1,0 +1,10 @@
+services:
+  - type: worker
+    name: telegram-bot
+    runtime: docker
+    plan: free
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_ID
+        sync: false
