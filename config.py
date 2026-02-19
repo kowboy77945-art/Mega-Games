@@ -1,9 +1,12 @@
 # config.py
+import os
 
-BOT_TOKEN = "8272014510:AAFnMI-2ESaKnHygmrpr4OlRaL4AvwmPVew"  # Токен от @BotFather
+# Берём токен из переменных окружения Render
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8272014510:AAFnMI-2ESaKnHygmrpr4OlRaL4AvwmPVew")
 
-# Админы (список Telegram ID)
-ADMINS = [8100816640]  # Замени на свой ID
+# Админы
+ADMIN_ID = os.getenv("ADMIN_ID", "8272014510")
+ADMINS = [int(x.strip()) for x in ADMIN_ID.split(",")]
 
 # Настройки бота
 BOT_NAME = "🤖 МегаБот"
@@ -21,10 +24,10 @@ DAILY_BONUS_MIN = 50
 DAILY_BONUS_MAX = 200
 
 # Реферальный бонус
-REFERRAL_BONUS_INVITER = 150  # Тому, кто пригласил
-REFERRAL_BONUS_INVITED = 100  # Тому, кого пригласили
+REFERRAL_BONUS_INVITER = 150
+REFERRAL_BONUS_INVITED = 100
 
-# Магазин — товары
+# Магазин
 SHOP_ITEMS = {
     "vip": {
         "name": "👑 VIP Статус",
